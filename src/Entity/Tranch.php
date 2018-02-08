@@ -7,19 +7,19 @@ class Tranch
 	const maximum_amount_of_investment = 1000;
 
 	public $name;
-	public $interest_rate;
+	public $monthly_interest_rate;
 	public $current_total;
 
 	/**
 	 * Tranch constructor.
 	 * @param string $name
-	 * @param int $interest_rate
+	 * @param int $monthly_interest_rate
 	 * @param int $current_total
 	 */
-	public function __construct(string $name, int $interest_rate, int $current_total)
+	public function __construct(string $name, int $monthly_interest_rate, int $current_total)
 	{
 		$this->name = $name;
-		$this->interest_rate = $interest_rate;
+		$this->monthly_interest_rate = $monthly_interest_rate;
 		$this->current_total = $current_total;
 	}
 
@@ -40,19 +40,19 @@ class Tranch
 	}
 
 	/**
-	 * @return int
+	 * @return mixed
 	 */
-	public function getInterestRate(): int
+	public function getMonthlyInterestRate()
 	{
-		return $this->interest_rate;
+		return $this->monthly_interest_rate;
 	}
 
 	/**
-	 * @param int $interest_rate
+	 * @param mixed $monthly_interest_rate
 	 */
-	public function setInterestRate(int $interest_rate): void
+	public function setMonthlyInterestRate($monthly_interest_rate): void
 	{
-		$this->interest_rate = $interest_rate;
+		$this->monthly_interest_rate = $monthly_interest_rate;
 	}
 
 	/**
